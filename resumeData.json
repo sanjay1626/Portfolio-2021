@@ -1,0 +1,158 @@
+{
+  "main": {
+    "name":"Sanjay Gonsalves",
+    "occupation":"Front-end Developer",
+    "description":"Undergoing Web Development Bootcamp with UCSD",
+    "image":"profilepic.jpg",
+    "bio":"Driven to learn quickly,advance computer proficiency and training in Web Developmemt. Solid background in front-end and back-end settings supporting team needs. Flexible and hardworking team player focused on boosting efficiency and performance with conscientious, detail-oriented approaches and detailed understanding of various programming languages.",
+    "contactmessage":"You can contact me, for any job oppurtunities or projects",
+    "email": "snjgonsalves@gmail.com",
+    "phone": "619-636-2857",
+    "address":{
+      "street":"1302 Leaf Terrace",
+      "city":"San Diego",
+      "state":"CA",
+      "zip": "92114"
+    },
+    "website": "https://github.com/sanjay1626",
+    "resumedownload":"",
+    "social":[
+      {
+        "name":"facebook",
+        "url":"https://www.facebook.com/sanjay.gonsalves.96/",
+        "className":"fa fa-facebook"
+      },
+      {
+        "name":"twitter",
+        "url":"http://twitter.com/sanjay16261",
+        "className":"fa fa-twitter"
+      },
+      {
+        "name":"google-plus",
+        "url":"http://googleplus.com/snjgonsalves",
+        "className":"fa fa-google-plus"
+      },
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/sanjay-gonsalves-61a74b39/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"instagram",
+        "url":"https://www.instagram.com/stormer_sj/",
+        "className":"fa fa-instagram"
+      },
+      {
+        "name":"github",
+        "url":"https://github.com/sanjay1626",
+        "className":"fa fa-github"
+      },
+      {
+        "name":"skype",
+        "url":"http://skype.com",
+        "className":"fa fa-skype"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"As a software developer leraning is life, i continue to keep learning to acheive my goals",
+    "education":[
+      {
+        "school":"UCSD Extension",
+        "degree":"Web Development",
+        "graduated":"March 2021",
+        "description":"Learned alot in about Front-End and Back-End technologies"
+      },
+      {
+        "school":"University of Baguio",
+        "degree":"BS Computer Engineering",
+        "graduated":"March 2004",
+        "description":"Learned machine programming language, hands on C++,Visual Basic,Assembly and Logic Gates"
+      }
+    ],
+    "work":[
+      {
+        "company":"Amazon Prime",
+        "title":"FC Associate",
+        "years":"March 2020 - Present",
+        "description":"Retreived, filed, and prepared daily orders of 300 or more to accomodate customers needs: pulling merchandise, packing boxes and placing orders in delivery space."
+      },
+      {
+        "company":"BlackArrow Express",
+        "title":"EC Supervisor",
+        "years":"April 2016 - June 2019",
+        "description":"Strategically plan and manage logistics, warehouse, transportation and customer services"
+      }
+    ],
+    "skills":[
+      {
+        "name":"Git",
+        "level":"80%"
+      },
+      {
+        "name":"Java",
+        "level":"75%"
+      },
+      {
+        "name":"ReactJs",
+        "level":"50%"
+      },
+      {
+        "name":"CSS",
+        "level":"90%"
+      },
+      {
+        "name":"HTML5",
+        "level":"80%"
+      },
+      {
+        "name":"Express",
+        "level":"75%"
+      },
+      {
+        "name":"MongoDB",
+        "level":"80%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"The Brewery",
+        "category":"My Brewery Tour will search brewery near me",
+        "image":"TheBrewery.jpg",
+        "url":"https://cdrobinsoniii.github.io/brewery-tour"
+      },
+      {
+        "title":"Fitness Tracker",
+        "category":"A simple fitness tracker",
+        "image":"fitnesstracker.jpg",
+        "url":"https://mysterious-wave-82555.herokuapp.com/"
+      },
+      {
+        "title":"Weather Dashboard",
+        "category":"Weather Dashboard that shows current and 5-days forecast",
+        "image":"WeatherDashboard.jpg",
+        "url":"https://sanjay1626.github.io/Weather-Dashboard/"
+      },
+      {
+        "title":"Employee Directory",
+        "category":"Search and view employee information",
+        "image":"employeedirectory.jpg",
+        "url":"https://sanjay1626.github.io/Employee-Directory/"
+      }
+    ]
+  },
+  "testimonials":{
+    "testimonials":[
+      {
+        "text":"Awesome student and a fast learner",
+        "user":"Peter Surowski"
+      },
+      {
+        "text":"Good Job, you have to ability to analyze and resolve problems in an efficient manner",
+        "user":"Brian Lee"
+      }
+    ]
+  }
+}
