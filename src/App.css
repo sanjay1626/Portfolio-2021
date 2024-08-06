@@ -7,13 +7,14 @@ header {
   background: url('../public/images/background.jpg') no-repeat center center/cover;
 }
 
-#nav-wrap {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 10px 0;
+#nav-wrap.fading-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+ 
+}
+
+#nav-wrap.fading-out * {
+  opacity: 0;
 }
 
 #nav {
@@ -33,12 +34,13 @@ header {
   text-decoration: none;
   font-weight: bold;
   padding: 10px 15px;
-  transition: color 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 
-#nav .menu-item a:hover,
-#nav .menu-item.current a {
+#nav .menu-item a.smoothscroll:hover {
   color: #f39c12;
+  opacity: 0.7;
+  transform: scale(1.1);
 }
 
 #nav .login-btn a {
@@ -54,6 +56,11 @@ header {
   color: white;
 }
 
+.banner.fading-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
 .banner {
   display: flex;
   align-items: center;
@@ -62,7 +69,11 @@ header {
   color: white;
   text-align: center;
 }
-
+.banner-text {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 15em; /* Space for the navigation bar */
+}
 .banner-text h1 {
   font-size: 3em;
   margin: 0;
