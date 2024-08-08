@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component} from 'react';
 import $ from 'jquery';
 import DarkModeToggle from './DarkModeToggle'; // Assuming a Dark Mode toggle component
+
+
 
 class Header extends Component {
   throttle = (func, wait) => {
@@ -21,16 +23,27 @@ class Header extends Component {
     const scrollPosition = $(window).scrollTop();
     const banner = $('.banner');
     const navWrap = $('#nav-wrap');
+    const scrolldown = $('.scrolldown')
 
     // Fade out the banner as the user scrolls down
     if (scrollPosition > 200) {
       banner.addClass('fading-out');
       navWrap.addClass('fading-out');
+      scrolldown.addClass('fading-out');
      } else {
       banner.removeClass('fading-out');
       navWrap.removeClass('fading-out');
+      scrolldown.addClass('fading-out');
       
     }
+    // Adjust the opacity of the scrolldown element
+    const maxScroll = 200; // Adjust this value as needed
+    const opacity = 1 - (scrollPosition / maxScroll);
+    
+    const newOpacity = opacity < 0 ? 0 : opacity;
+    banner.css('opacity', newOpacity);
+    navWrap.css('opacity', newOpacity);
+    scrolldown.css('opacity', newOpacity);
   }
 
   handleScrollThrottled = this.throttle(this.handleScroll, 100);
@@ -50,19 +63,20 @@ class Header extends Component {
     });
     // Add smooth scrolling effect
     $(window).on('scroll', this.handleScrollThrottled);
+    document.addEventListener('mousemove', this.handleMouseMove);
   }
 
   render() {
     const { data } = this.props;
 // Default values
-const userName = data?.name || 'Sanjay Gonsalves';
-const occupation = data?.occupation || 'Software Engineer';
-const description = data?.description || 'Challenging myself to develop innovative websites';
-const city = data?.address?.city || 'San Diego';
-const networks = data?.social?.map(network => (
-  <li key={network.name}>
-    <a href={network.url}><i className={network.className}></i></a>
-  </li>
+    const userName = data?.name || 'Sanjay Gonsalves';
+    const occupation = data?.occupation || 'Software Engineer';
+    const description = data?.description || 'Challenging myself to develop innovative websites';
+    const city = data?.address?.city || 'San Diego';
+    const networks = data?.social?.map(network => (
+    <li key={network.name}>
+      <a href={network.url}><i className={network.className}></i></a>
+    </li>
 )) || [
   <li key="linkedin">
     <a href="https://www.linkedin.com/in/sanjaygonsalves/"><i className="fa fa-linkedin"></i></a>
@@ -74,6 +88,7 @@ const networks = data?.social?.map(network => (
 
     return (
       <header id="home">
+        
         <nav id="nav-wrap">
           <DarkModeToggle />
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
